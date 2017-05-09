@@ -14,8 +14,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 0 15px;
   clear: both;
 }
 
@@ -65,7 +66,7 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
+  padding: 0 20px;
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -85,7 +86,7 @@ nav {
 nav a {
   display: inline-block;
   padding-left: 15px;
-  margin-left: 15px;
+  margin-left: 13px;
   line-height: 18px;
   color: #999;
   text-decoration: none;
@@ -94,6 +95,7 @@ nav a {
 
 nav a:first-child {
   border-left: 0 none;
+  padding-left: 0;
 }
 
 /* footer */
@@ -109,12 +111,10 @@ footer {
   border-top: 8px solid #4aaaa5;
 }
 
-/* sidebar */
+/* connect */
 
-.sidebar {
-  float: right;
+.connect {
   width: 100%;
-  max-width: 270px;
   padding: 30px;
   margin-bottom: 20px;
   background: #fff;
@@ -122,7 +122,7 @@ footer {
 }
 
 h3,
-.sidebar h2 {
+.connect h2 {
   padding-bottom: 20px;
   margin-bottom: 15px;
   line-height: 22px;
@@ -140,20 +140,31 @@ h3,
   margin-right: 0;
 }
 
-/* main */
+/* main-section */
 
 #main-container {
   padding-top: 130px;
 }
 
-.main-section {
-  float: left;
+.content {
   width: 100%;
-  max-width: 650px;
   padding: 30px;
   margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
+  overflow: auto;
+}
+
+.main-section {
+  width: 66.66666667%;
+  float: left;
+  padding-right: 30px;
+}
+
+.sidebar {
+  width: 33.33333333%;
+  float: left;
+  padding-left: 20px;
 }
 
 /* portfolio page */
@@ -161,13 +172,13 @@ h3,
 .work {
   position: relative;
   float: left;
-  width: 274px;
+  width: 260px;
   margin: 20px 0 25px;
   overflow: auto;
 }
 
 .work:nth-child(even) {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .work img {
@@ -236,4 +247,113 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+
+@media only screen and (max-width: 980px){
+    .container {
+        max-width: 788px;
+    }
+
+    .main-section {
+      width: 60%;
+    }
+    .sidebar {
+      width: 40%;
+      padding-left: 0;
+    }
+
+    .auth-image {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+     .work {
+      margin-left: 0;
+      float: none;
+      width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        max-width: 660px;
+    }
+
+    .main-section {
+      float: none;
+      width: 100%;
+      padding-right: 0;
+    }
+
+    .auth-image {
+        float: left;
+        width: 200px;
+    }
+
+    .sidebar {
+      float: none;
+      width: 100%;
+    }
+
+    .work {
+      width: 48%;
+      float: left;
+    }
+ 
+}
+
+@media only screen and (max-width: 640px){
+    .container {
+        max-width: 640px;
+    }
+
+    #masthead .container {
+        padding: 0;
+    }
+    
+    #masthead {
+        position: static;
+    }
+
+    #main-container {
+        padding-top: 0;
+    }
+    
+    .work {
+      margin-left: 0;
+      float: none;
+      width: 100%;
+    }
+
+    .auth-image {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        float: none;
+        margin-top: 0;
+        height: 40px;
+        padding-top: 12px;
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    nav a{
+       width: 33.33%;
+       margin:0;
+       float: left;
+    }
+
+    #logo {
+        float: none;
+        width: 100%;
+        display: block;
+    }
+
 }
