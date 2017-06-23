@@ -9,9 +9,39 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 
 <body>
+    <script>
+
+         window.fbAsyncInit = function() {
+         FB.init({
+                 appId      : '633563123501014',
+                 cookie     : true,
+                 xfbml      : true,
+                 version    : 'v2.8'
+         });
+         FB.AppEvents.logPageView();  
+         FB.getLoginStatus(function(response) {
+             //statusChangeCallback(response);
+             console.log(response);
+            }); 
+         };
+
+         (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             //js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=633563123501014";
+             fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    
+    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
 
     <header id="masthead">
         <div class="container">
